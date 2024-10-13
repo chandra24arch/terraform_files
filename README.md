@@ -1,2 +1,2 @@
 # terraform_files
-tfm_dir
+terraform_workspace
