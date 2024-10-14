@@ -36,7 +36,20 @@ resource "local_file" "resource6"{
 }
 resource "local_file" "resource7"{
   filename= "fl7"
-  content= var.mapvar.name
+  content= var.mapvar.id
 
 }
+resource "local_file" "resource8"{
+  filename= "fl8"
+  content= var.tuplevar[1]
 
+}
+resource "local_file" "resource9"{
+  filename= "fl9"
+  content= var.objvar.id
+}
+
+resource "local_file" "resource10"{
+  filename= "fl10"
+  content= var.comobj.address[0].address2
+}

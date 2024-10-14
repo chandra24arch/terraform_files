@@ -39,3 +39,37 @@ variable "mapvar"{
 
 }
 }
+variable "tuplevar"{
+  type = tuple([string, number, list(any)])
+  default=["chandra", 24, ["a",6]]
+}
+
+variable "objvar" {
+  type= object({
+   id  = number
+  name= string
+  address = list(string)
+})
+
+default = {
+  id = 4
+  name= "kvchandra"
+  address = ["cityA","cityB"]
+  
+}
+}
+variable comobj{
+type =object ({
+
+id = number
+name= string
+address = list(map(string))
+})
+
+default ={
+
+id=1
+name= "kv"
+address=[{address1="cityA",address2="city2"}]
+}
+}
